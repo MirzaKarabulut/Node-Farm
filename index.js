@@ -1,4 +1,5 @@
 const fs = require('fs');
+const http = require('http');
 
 // Blocking-Sync
 // const textIn = fs.readFileSync('./starter/txt/input.txt', 'utf-8');
@@ -10,17 +11,15 @@ const fs = require('fs');
 
 // NoBlocking-Async
 
-fs.readFile('./starter/txt/start.txt', 'utf-8', (err, data1) => {
-  fs.readFile(`./starter/txt/${data1}.txt`, 'utf-8', (err, data2) => {
-    console.log(data2);
-    fs.readFile(`./starter/txt/append.txt`, 'utf-8', (err, data3) => {
-      console.log(data3);
-      fs.writeFile('./starter/txt/final.txt',`${data2}\n${data3}`, 'utf-8', (err) => {
-        console.log("Your filw has been written");
-        console.log("srfsg");
-  })
-  })
-  })
-});
-
-console.log("Will read file");
+// fs.readFile('./starter/txt/start.txt', 'utf-8', (err, data1) => {
+//   fs.readFile(`./starter/txt/${data1}.txt`, 'utf-8', (err, data2) => {
+//     console.log(data2);
+//     fs.readFile(`./starter/txt/append.txt`, 'utf-8', (err, data3) => {
+//       console.log(data3);
+//       fs.writeFile('./starter/txt/final.txt',`${data2}\n${data3}`, 'utf-8', (err) => {
+//         console.log("Your filw has been written");
+//   })
+//   })
+//   })
+// });
+// console.log("Will read file");
